@@ -1,0 +1,15 @@
+name: kubectl-aws-eks
+description: 'Run kubectl against an AWS EKS cluster'
+author: 'Charlie McCain'
+inputs:
+  command:
+    description: >-
+      kubectl command to execute. can also be a file to execute. file path can be
+      relative to work_dir or absolute
+    required: true
+outputs:
+  result:
+    description: 'Output result (success|failure)'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
